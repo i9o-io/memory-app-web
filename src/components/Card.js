@@ -18,9 +18,9 @@ function getParam(name, url) {
 export default function Card(props) {
 
     const [data, setData] = useState({})
+    const id = getParam("id")
 
     useEffect(() => {
-        const id = getParam("id")
         if (!id) { return }
 
         const docRef = doc(db, "data", id);
@@ -46,7 +46,7 @@ export default function Card(props) {
         );
     }, [])
 
-    if (!data) {
+    if (!data || !id) {
         return <div className="card"><p>Loading...</p></div>
     }
     return (

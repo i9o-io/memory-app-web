@@ -1,0 +1,32 @@
+.card {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+}
+
+.card div {
+    padding: 10px 0;
+}
+
+.card div.displayName {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.card div p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card div.timestamp {
+    font-size: 0.8em;
+    color: #999;
+    text-align: right;
+}

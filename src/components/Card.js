@@ -46,14 +46,19 @@ export default function Card(props) {
         );
     }, [])
 
-    if (!data || !id) {
+    if (!data.text || !id) {
         return <div className="card"><p>Loading...</p></div>
     }
+
     return (
         <div className="card">
             <div>
                 <div className="displayName">@{data.user?.displayName || "anonymous"}</div>
-                <p>{data.text}</p>
+                <div>
+                    {
+                        data.text.split("\n").map((line) => { return (<p className='no-margin'>{line}</p>) })
+                    }
+                </div>
                 <div className="timestamp">{data.timestamp}</div>
             </div>
         </div>
